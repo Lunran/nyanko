@@ -13,19 +13,19 @@ BASE_W, BASE_H = 16, 32
 UNIT_SPECS = {
     "nekosmall":   (30,  5, 1.2, 12, 8,  "Ko-Neko"),    # cyan  answer 1-20
     "nekobuilder": (60, 10, 0.9,  3, 10, "NekoBuild"),  # green answer 21-49
-    "nekodra":     (130, 20, 0.7, 10, 13, "NekoKing"),  # yellow answer 50-81
+    "nekodra":     (120, 20, 0.7, 10, 13, "NekoKing"),  # yellow answer 50-81
 }
 ENEMY_SPECS = [
-    (25,  4, 0.8, 8,  8,  "ZakoInu"),   # dark red
-    (55,  9, 0.6, 2,  11, "DekaInu"),   # red
-    (100, 18, 0.5, 14, 14, "BossInu"),  # orange-ish
+    (30,  4, 0.8, 8,  8,  "ZakoInu"),   # dark red
+    (60,  9, 0.6, 2,  11, "DekaInu"),   # red
+    (120, 18, 0.5, 14, 14, "BossInu"),  # orange-ish
 ]
 
 # ─── Helper ───────────────────────────────────────────────────────────────────
 def unit_spec_from_answer(ans: int):
     if ans <= 20:
         return UNIT_SPECS["nekosmall"]
-    elif ans <= 49:
+    elif ans <= 50:
         return UNIT_SPECS["nekobuilder"]
     else:
         return UNIT_SPECS["nekodra"]
